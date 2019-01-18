@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+h2{
+    margin-bottom: 1rem;
+}
+
 /*----navbar changing background----*/
 #navbar{
     position: fixed;
@@ -245,7 +249,7 @@ figure:hover figcaption{
 /*----contact----*/
 
 #contact{
-    padding: 20px .75rem 10px .75rem;
+    padding: 20px .75rem 2rem .75rem;
 }
 
 #contact .container{
@@ -291,6 +295,14 @@ figure:hover figcaption{
     border-radius: 35px;
     padding: 14px;
     margin: 6px;
+}
+
+#social .social-btn{
+    padding-bottom: 2rem;
+}
+
+#social{
+    padding-bottom: 2rem;
 }
 
 /*----scroll-bar----*/
