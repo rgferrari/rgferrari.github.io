@@ -221,6 +221,7 @@ figure:hover figcaption{
 #projects .modal-content p{
     text-indent: 2rem;
     text-align: justify;
+    margin: 0;
 }
 
 @media screen and (min-width: 768px){
@@ -262,10 +263,6 @@ figure:hover figcaption{
 
 #contact .container .row .col-md-4{
     padding: .75rem;
-}
-
-#contact form{
-    text-align: justify;
 }
 
 @media screen and (max-width: 768px){
