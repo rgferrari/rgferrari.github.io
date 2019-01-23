@@ -18,11 +18,11 @@ $(document).ready(function(){
             if(isScrolledIntoView($(this))){
                 $(this).find('.skillbar-bar').animate({
                     width:$(this).attr('data-percent')
-                },4000);
+                },3000);
             }
         });
     });
-
+/*
     //move loading bars
     var b1 = document.querySelector(".ldBar");
     var b = new ldBar(b1);
@@ -30,7 +30,7 @@ $(document).ready(function(){
     setInterval(function() {
         b.set(40);
     }, 1000);   
-     
+ */    
 
     //smooth-scroll
     // Add smooth scrolling to all links
@@ -82,8 +82,6 @@ $(document).ready(function(){
         var elemTop = $elem.offset().top;
         var elemBottom = elemTop + $elem.height();
     
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)); 
     }
 });
-
-
