@@ -40,7 +40,7 @@ h2{
 
 /*----header----*/
 header {
-    background-image: url('https://via.placeholder.com/1920x500');
+    /*background-image: url('https://via.placeholder.com/1920x500');*/
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -138,6 +138,7 @@ header {
 /*----Skill Bar----*/
 
 .skillbar {
+    /*color: #000;*/
 	position:relative;
 	display:block;
 	margin-bottom:15px;
@@ -151,26 +152,26 @@ header {
 
 .skillbar-title {
 	position:absolute;
-	top:0;
+    top:0;
 	/*left:-110px;*/
 	width:110px;
 	font-weight:bold;
-	font-size:13px;
-	color:#ffffff;
-    background:#6adcfa;
+    font-size:13px;
+    color:#fff;
+    /*background:#6adcfa;
     border-radius: 3px;
-	/*border-top-left-radius:3px;
+	border-top-left-radius:3px;
 	border-bottom-left-radius:3px;*/
 }
 
 .skillbar-title span {
 	display:block;
-	background:rgba(0, 0, 0, 0.1);
+	/*background:rgba(0, 0, 0, 0.1);*/
 	padding:0 20px;
 	height:25px;
     line-height:25px;
-    border-radius: 3px;
-	/*border-top-left-radius:3px;
+    /*border-radius: 3px;
+	border-top-left-radius:3px;
 	border-bottom-left-radius:3px;*/
 }
 
@@ -188,7 +189,7 @@ header {
 	font-size:11px;
 	height:25px;
 	line-height:25px;
-	color:#ffffff;
+	/*color:#ffffff;*/
 	color:rgba(0, 0, 0, 0.4);
 }
 
@@ -199,14 +200,25 @@ header {
     padding: 0 .75rem 0 .75rem;
 }
 
+#projects img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 #projects figure button{
     font-size: 1.25rem;
 }
 
+/*FIXME fix figcaption border radius*/
 figure{
+    padding-top: 66.66%;
     position: relative;
     overflow: hidden;
-    border-radius: 12px
+    border-radius: 12px;
 }
 
 figure figcaption{

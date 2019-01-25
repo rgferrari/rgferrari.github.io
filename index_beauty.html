@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,17 +8,15 @@
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-    <!--<link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>-->
-
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
 
     <link rel="icon" type="image/gif/png" href="img/letter-r-key-on-keyboard-16-transparente.png">
     <title>René Gargano Ferrari | Desenvolvedor</title>
 </head>
 <body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark sticky-top">
-        <a class="navbar-brand" href="#start"><img src="img/letter-r-key-on-keyboard-white.svg" style="max-height: 2rem;"/></a>
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light sticky-top">
+        <a class="navbar-brand" href="#start"><img id="icon" src="img/letter-r-key-on-keyboard-black.svg" style="max-height: 2rem;"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,7 +44,7 @@
 
     <!-- Header -->
     <header id="start">
-        <h1 class="centered">Estudante e Desenvolvedor</h1>
+        <h1 class="centered" style="color: black;">Estudante e Desenvolvedor</h1>
     </header>
 
     <!-- About me -->
@@ -67,56 +65,60 @@
                     <p>Me interesso muito pelo desenvolvimento de jogos e Machine Learning. Além disso tenho 1 ano e meio de exeperiência com o desenvolvimento de sites.</p>
                     <hr>
                     <h3>Linguagens</h3>
-                    <div class="skillbar clearfix " data-percent="50%">
-                        <div class="skillbar-title" style="background: #E54C21;"><span>HTML5</span></div>
-                        <div class="skillbar-bar" style="background: #F16524;"></div>
+                    <!--TODO negative text animation-->
+                    <div class="skillbar clearfix" data-percent="50%">
+                        <div class="skillbar-bar" style="background: #F16524;">
+                                <div class="skillbar-title mask"><span>HTML5</span></div>
+                                <div class="skillbar-title"><span>HTML5</span></div>
+                        </div>
                         <div class="skill-bar-percent">50%</div>
                     </div>
                     
-                    <div class="skillbar clearfix " data-percent="50%">
-                        <div class="skillbar-title" style="background: #1572B6;"><span>CSS3</span></div>
-                        <div class="skillbar-bar" style="background: #33A9DC;"></div>
+                    <div class="skillbar clearfix" data-percent="50%">
+                        <div class="skillbar-bar" style="background: #33A9DC;">
+                                <div class="skillbar-title"><span>CSS3</span></div>
+                        </div>
                         <div class="skill-bar-percent">50%</div>
                     </div>
 
-                    <div class="skillbar clearfix " data-percent="40%">
-                        <div class="skillbar-title" style="background: #63A714;"><span>Javascript</span></div>
+                    <div class="skillbar clearfix" data-percent="30%">
+                        <div class="skillbar-title"><span>Javascript</span></div>
                         <div class="skillbar-bar" style="background: #89CF17;"></div>
-                        <div class="skill-bar-percent">40%</div>
+                        <div class="skill-bar-percent">30%</div>
                     </div>
 
-                    <div class="skillbar clearfix " data-percent="70%">
-                        <div class="skillbar-title" style="background: #2c3e50;"><span>C</span></div>
+                    <div class="skillbar clearfix" data-percent="70%">
+                        <div class="skillbar-title"><span>C</span></div>
                         <div class="skillbar-bar" style="background: #2c3e50;"></div>
                         <div class="skill-bar-percent">70%</div>
                     </div>
                     
-                    <div class="skillbar clearfix " data-percent="50%">
-                        <div class="skillbar-title" style="background: #690082;"><span>C#</span></div>
+                    <div class="skillbar clearfix" data-percent="50%">
+                        <div class="skillbar-title"><span>C#</span></div>
                         <div class="skillbar-bar" style="background: #690082;"></div>
                         <div class="skill-bar-percent">50%</div>
                     </div>
                     
-                    <div class="skillbar clearfix " data-percent="50%">
-                        <div class="skillbar-title" style="background: #EB2C2B;"><span>Java</span></div>
+                    <div class="skillbar clearfix" data-percent="50%">
+                        <div class="skillbar-title"><span>Java</span></div>
                         <div class="skillbar-bar" style="background: #EB2C2B;"></div>
                         <div class="skill-bar-percent">50%</div>
                     </div>
 
-                    <div class="skillbar clearfix " data-percent="50%">
-                        <div class="skillbar-title" style="background: #3B77AA;"><span>Python</span></div>
+                    <div class="skillbar clearfix" data-percent="50%">
+                        <div class="skillbar-title"><span>Python</span></div>
                         <div class="skillbar-bar" style="background: #3B77AA;"></div>
                         <div class="skill-bar-percent">50%</div>
                     </div>
                     
                     <div class="skillbar clearfix " data-percent="40%">
-                        <div class="skillbar-title" style="background: #453A62;"><span>Haskell</span></div>
+                        <div class="skillbar-title"><span>Haskell</span></div>
                         <div class="skillbar-bar" style="background: #5E5086;"></div>
                         <div class="skill-bar-percent">40%</div>
                     </div>
 
                     <div class="skillbar clearfix " data-percent="40%">
-                        <div class="skillbar-title" style="background: #EE3A25;"><span>Prolog</span></div>
+                        <div class="skillbar-title"><span>Prolog</span></div>
                         <div class="skillbar-bar" style="background: #F16527;"></div>
                         <div class="skill-bar-percent">40%</div>
                     </div>
@@ -142,17 +144,7 @@
                         <li>Vim</li>
                     </ul>
                 </div>
-                
-                <!-- University 
-                <div class="col-md-4">
-                    <h3>Faculdade</h3>
-                    <p>Curso no momento o terceiro semestre de Ciência da Computação. Estou sempre em busca de projetos para fazer em paralelo com a faculdade.</p>
-                    <hr>
-                    <h3>Progressão do Curso</h3>
-                    <div data-type="fill" data-path="m35,2 h30 q-5,0 -5,30 L90,82 Q98,98 80,98 L20,98
-                    Q0,98 10,82 L40,32 Q40,2 35,2 h1" class="ldBar label-center" data-fill="data:ldbar/res,bubble(#9400D3,#fff,50,2.5)" data-value="0" style="width: 100%;"></div>
-                </div>
-                -->
+
             </div>
         </div>
     </section>
@@ -163,9 +155,10 @@
         <p class="text-center">Aqui estão alguns projetos dos quais eu participei.</p>
         <div class="container text-center">
             <div class="row">
+
                 <div class="col-lg-4 col-md-6">
                     <figure>
-                        <img class="img-fluid border rounded" src="https://via.placeholder.com/1000x667"/>
+                        <img id="test" class="img-fluid border rounded" src="img/mr_toffee.png"/>
                         <figcaption>
                             <h3>Mr. Toffee</h3>
                             <p>Desenvolvido na 4ª Game Jam de Santa Maria</p>
@@ -198,7 +191,7 @@
                 
                 <div class="col-lg-4 col-md-6">
                     <figure>
-                        <img class="img-fluid border rounded" src="https://via.placeholder.com/1000x667"/>
+                        <img class="img-fluid border rounded" src="img/no_treats.png"/>
                         <figcaption>
                             <h3>No Treats</h3>
                             <p>Desenvolvido na 5ª Game Jam de Santa Maria</p>
@@ -228,11 +221,13 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>        
     </section>
 
     <!-- Contact -->
+    <!--TODO set button and title vertically in the middle-->
     <section id="contact" class="bg-dark">
         <div class="container bg-red text-center rounded"> 
             <div class="row">
@@ -240,7 +235,7 @@
                     <h2 style="margin: 0; font-size: 2rem; color: white;">Contato</h2>
                 </div>
                 <div class="col-md-4"> 
-                    <p style="margin: 0; color: white;">Quer em trocar conhecimento ou iniciar algum projeto comigo? Vamos conversar!</p>
+                    <p style="margin: 0; color: white;">Quer trocar conhecimento ou iniciar algum projeto comigo? Vamos conversar!</p>
                 </div>
                 <div class="col-md-4">
                     <a class="btn btn-outline-light" href="mailto:renegferrari@gmail.com" style="font-size: 1.25rem;">Fale Comigo</a>
@@ -253,9 +248,9 @@
     <footer id="social" class="bg-dark">
         <div class="social-btn">
             <p>Você também pode me encontrar aqui</p>    
-            <a href="https://www.facebook.com/rgferrari" target="_blank" class="fab fa-facebook-square fa-2x" style="background: #0077B5;"></a>
+            <a href="https://www.facebook.com/rgferrari" target="_blank" class="fab fa-facebook-square fa-2x" style="background: #4267B2;"></a>
             <a href="https://www.instagram.com/renegf1" target="_blank" class="fab fa-instagram fa-2x" style="background: linear-gradient(45deg, #ffdc6e 0%,#f26330 32%,#d8258a 70%,#7643ca 100%);"></a>
-            <a href="https://www.linkedin.com/in/ren%C3%A9-gargano-ferrari-59a889144/" target="_blank" class="fab fa-linkedin-in fa-2x" style="background: #0077B5;"></a>
+            <a href="https://www.linkedin.com/in/ren%C3%A9-gargano-ferrari-59a889144/" target="_blank" class="fab fa-linkedin-in fa-2x" style="background: #0077B5"></a>
             <a href="https://github.com/rgferrari" target="_blank" class="fab fa-github fa-2x" style="background: #24292E;"></a>
             <a href="https://www.kaggle.com/renegf" target="_blank" class="fab fa-kaggle fa-2x" style="background: #24B1EB;"></a> 
         </div>
@@ -264,8 +259,7 @@
             Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
         </div>
     </footer>
-
-    
+  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -274,20 +268,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
-
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
 </body>
 </html>         
 
-
-<!--#TODO 
-    animações das barras acontecem qnd entram em tela
-    fazer os itens do menu acenderem qnd estao na seção 
-    fazer ícone do titulo
-    itens menu highlight 
-    diminuir pagina no celular
-    Escolher paleta de cores
-    Escolher fonte do site
--->
-<!--<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->

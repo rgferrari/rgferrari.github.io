@@ -3,11 +3,16 @@ $(document).ready(function(){
     //change navbar background
     $(function(){
         var element = document.getElementById("navbar");
+        var image = document.getElementById("icon");
         $(window).on("scroll", function() {
           if($(window).scrollTop() > 50) {
-            element.classList.add("bg-dark");
+            image.src = "img/letter-r-key-on-keyboard-white.svg";
+            element.classList.remove("navbar-light");
+            element.classList.add("bg-dark",  "navbar-dark");
           } else {
-            element.classList.remove("bg-dark");
+            image.src = "img/letter-r-key-on-keyboard-black.svg";
+            element.classList.remove("bg-dark", "navbar-dark");
+            element.classList.add("navbar-light");
           }
         });
     });
@@ -22,17 +27,7 @@ $(document).ready(function(){
             }
         });
     });
-/*
-    //move loading bars
-    var b1 = document.querySelector(".ldBar");
-    var b = new ldBar(b1);
-    console.log(b);
-    setInterval(function() {
-        b.set(40);
-    }, 1000);   
- */    
 
-    //smooth-scroll
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
 
@@ -56,6 +51,7 @@ $(document).ready(function(){
         } // End if
     });
 
+    //FIXME fix highlight navbar
     //Highlight nav-bar
     $(document).on("scroll", function(event){  
         var scrollPos = $(document).scrollTop();
