@@ -21,7 +21,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         $('.skillbar').each(function(){
             if(isScrolledIntoView($(this))){
-                $(this).find('.skillbar-bar').animate({
+                $(this).find('.skillbar-bar, .skillbar-bar .negative').animate({
                     width:$(this).attr('data-percent')
                 },3000);
             }

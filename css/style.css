@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/*TODO find font to titles*/
 
 @font-face{
     font-family: "Basic Manual";
@@ -40,7 +41,6 @@ h2{
 
 /*----header----*/
 header {
-    /*background-image: url('https://via.placeholder.com/1920x500');*/
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -56,6 +56,8 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 /*----Sobre mim----*/
@@ -137,8 +139,16 @@ header {
 
 /*----Skill Bar----*/
 
+.skillbar-bar .negative{
+    position: absolute;
+    top: 0;
+    max-width: 110px;
+    width: 0;
+    color: #fff;
+    overflow:hidden;
+}
+
 .skillbar {
-    /*color: #000;*/
 	position:relative;
 	display:block;
 	margin-bottom:15px;
@@ -147,32 +157,23 @@ header {
 	border-radius: 0 3px 3px 0;
 	transition:0.1s linear;
     transition-property:width, background-color;
-    /*margin-left: 110px;*/
 }
 
 .skillbar-title {
 	position:absolute;
     top:0;
-	/*left:-110px;*/
-	width:110px;
+    width: 110px;
 	font-weight:bold;
     font-size:13px;
-    color:#fff;
-    /*background:#6adcfa;
-    border-radius: 3px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;*/
+    color:rgba(0, 0, 0, 0.4);
 }
 
 .skillbar-title span {
+    float: left;
 	display:block;
-	/*background:rgba(0, 0, 0, 0.1);*/
-	padding:0 20px;
+    padding:0 20px;
 	height:25px;
     line-height:25px;
-    /*border-radius: 3px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;*/
 }
 
 .skillbar-bar {
@@ -189,7 +190,6 @@ header {
 	font-size:11px;
 	height:25px;
 	line-height:25px;
-	/*color:#ffffff;*/
 	color:rgba(0, 0, 0, 0.4);
 }
 
@@ -213,16 +213,16 @@ header {
     font-size: 1.25rem;
 }
 
-/*FIXME fix figcaption border radius*/
 figure{
     padding-top: 66.66%;
     position: relative;
     overflow: hidden;
+    border-width: 0;
     border-radius: 12px;
 }
 
 figure figcaption{
-    background-color: #292E33;
+    background-color: #727F8C;
     width: 100%;
     height: 100%;
     padding: 0 3rem;
@@ -296,6 +296,17 @@ figure:hover figcaption{
 @media screen and (max-width: 768px){
     #contact .container{
         margin-top: -5rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .centered-md{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
     }
 }
 /*----footer----*/
