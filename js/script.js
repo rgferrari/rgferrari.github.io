@@ -18,16 +18,34 @@ $(document).ready(function(){
     });
 
     //move skillbars
+    $('.skillbar').each(function(){
+        $(this).prop('visible', false);
+    });   
+
     $(window).scroll(function(){
         $('.skillbar').each(function(){
-            if(isScrolledIntoView($(this))){
+            if(isScrolledIntoView($(this)) && !($(this).prop('visible'))){
                 $(this).find('.skillbar-bar, .skillbar-bar .negative').animate({
                     width:$(this).attr('data-percent')
                 },3000);
+                $(this).prop("visible", true);
             }
         });
     });
 
+    function isScrolledIntoView(elem){
+        var $elem = $(elem);
+        var $window = $(window);
+    
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+    
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+    
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)); 
+    }
+/*
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
 
@@ -67,17 +85,50 @@ $(document).ready(function(){
             }
         });
     });  
+*/  
 
-    function isScrolledIntoView(elem){
-        var $elem = $(elem);
-        var $window = $(window);
-    
-        var docViewTop = $window.scrollTop();
-        var docViewBottom = docViewTop + $window.height();
-    
-        var elemTop = $elem.offset().top;
-        var elemBottom = elemTop + $elem.height();
-    
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)); 
-    }
+    var lastId,
+    topMenu = $("#navbar"),
+    topMenuHeight = topMenu.outerHeight()+1,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+        var item = $($(this).attr("href"));
+            if (item.length) { return item; }
+    });
+
+    // Bind click handler to menu items
+    // so we can get a fancy scroll animation
+    (menuItems).click(function(e){
+        var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+        $('html, body').stop().animate({ 
+            scrollTop: offsetTop
+        }, 850);
+        e.preventDefault();
+    });
+
+    // Bind to scroll
+    $(window).scroll(function(){
+    // Get container scroll position
+        var fromTop = $(this).scrollTop()+topMenuHeight;
+        
+        // Get id of current scroll item
+        var cur = scrollItems.map(function(){
+            if ($(this).offset().top < fromTop)
+            return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length-1];
+        var id = cur && cur.length ? cur[0].id : "";
+        
+        if (lastId !== id) {
+            lastId = id;
+            // Set/remove active class
+            menuItems
+                .parent().removeClass("active")
+                .end().filter("[href=#"+id+"]").parent().addClass("active");
+        }                   
+    });
 });
